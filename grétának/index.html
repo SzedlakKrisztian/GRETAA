@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szeretlek Kicsim 💕</title>
+    <link rel="shortcut icon" href="./235394.png" type="image/x-icon">
+    <script src="index.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffcccb;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff4d4d;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .no-btn {
+            background-color: #ff6666;
+            color: white;
+        }
+
+        .yes-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .no-btn:hover {
+            background-color: #ff3333;
+        }
+
+        .yes-btn:hover {
+            background-color: #45a049;
+        }
+
+        .form-container {
+            display: none; /* Initially hidden */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-container button {
+            background-color: #ff9966;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #ff704d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="question">Jobban szeretlek :3</h1>
+        <div class="buttons">
+            <button class="no-btn">NEM!</button>
+            <button class="yes-btn">Jó na</button>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <p>Köszönöm, hogy szeretsz! Most írd be a kedvenc dolgom a világon: ❤️</p>
+        <input type="text" placeholder="Írd be ide..." style="font-size: 1.2rem; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        <br>
+        <button class="submit-btn">Hmhm imádlak</button>
+    </div>
+
+    <script>
+        // Select buttons and form
+        const noButton = document.querySelector('.no-btn');
+        const yesButton = document.querySelector('.yes-btn');
+        const formContainer = document.querySelector('.form-container');
+        const container = document.querySelector('.container');
+        const submitButton = document.querySelector('.submit-btn');
+        const question = document.getElementById('question');
+
+        // Array of possible questions
+        const questions = [
+            "Na mégegyszer",
+            "Talán most",
+            "Most ugrik a majom a vízbe",
+            "Próbáljuk újra",
+            "Naa :c",
+            "Fogadd már el BASSZUSS!!!!"
+        ];
+
+        // Counter for question changes
+        let questionIndex = 0;
+
+        // Change the question when "NEM!" is clicked
+        noButton.addEventListener('click', () => {
+            questionIndex = (questionIndex + 1) % questions.length; // Cycle through questions
+            question.textContent = questions[questionIndex];
+        });
+
+        // Show the form when "Jó na" is clicked
+        yesButton.addEventListener('click', () => {
+            container.style.display = 'none'; // Hide the initial buttons
+            formContainer.style.display = 'block'; // Show the form
+        });
+
+        // Redirect to a new site when "Hmhm imádlak" is clicked
+        submitButton.addEventListener('click', () => {
+            window.location.href = 'https://www.szeretlekkicsim.hu'; // Replace with your desired URL
+        });
+    </script>
+</body>
+</html>

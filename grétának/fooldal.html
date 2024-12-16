@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szeretlek Kicsim 💕</title>
+    <link rel="shortcut icon" href="./235394.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        /* Reset body and ensure it covers the full screen */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Move content to the top */
+            overflow: hidden;
+            position: relative;
+            flex-direction: column;
+        }
+
+        /* Video Background */
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Makes the video cover the entire screen */
+            z-index: -1; /* Send the video to the background */
+        }
+
+        /* Main content container */
+        .container {
+            text-align: center;
+            z-index: 1; /* Ensures the text is above the video */
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 50px; /* Move the title down a bit */
+        }
+
+        /* Style for the "Emlékeink :3" text */
+        .title {
+            font-family: 'Dancing Script', cursive; /* Applying the handwritten font */
+            font-size: 3rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px; /* Space between title and grid */
+        }
+
+        /* Grid container for the images and text */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            padding: 20px;
+            max-width: 1000px; /* Limit the width of the grid */
+            z-index: 1; /* Ensure grid items appear above video */
+        }
+
+        /* Individual grid items */
+        .grid-item {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.6); /* Background color for better contrast */
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .grid-item p {
+            margin-top: 10px;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05); /* Slight scale effect on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video class="video-bg" autoplay loop muted>
+        <source src="./_⋆ Pink Aesthetic Moving Backgrounds ⋆ .mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Title Text -->
+    <div class="container">
+        <h1 class="title">Emlékeink :3</h1>
+    </div>
+
+    <!-- Grid with Images and Captions -->
+    <div class="grid-container">
+        <div class="grid-item">
+            <img class="grid-item-1" src="1.webp" alt="">
+            <p>"Nagyon boldog, mert vagy"</p>
+        </div>
+        <div class="grid-item">
+            <img class="grid-item-2" src="2.webp" alt="">
+            <p>"Először aludtál itt :3"</p>
+        </div>
+        <div class="grid-item">
+            <img class="grid-item-3" src="3.webp" alt="">
+            <p>"Közös stand is pipa"</p>
+        </div>
+        <div class="grid-item">
+            <img class="grid-item-4" src="4.webp" alt="">
+            <p>"Cute little séta"</p>
+        </div>
+        <div class="grid-item">
+            <img class="grid-item-5" src="5.webp" alt="">
+            <p>"Imádom a hajad basztatni :3"</p>
+        </div>
+        <div class="grid-item">
+            <img class="grid-item-6" src="6.webp" alt="">
+            <p>"FAGYII (nyakam ne nézd hmhm)"</p>
+        </div>
+        <div class="grid-item">
+            <img class="grid-item-7" src="7.webp" alt="">
+            <p>"Szomcsi"</p>
+        </div>
+        <div class="grid-item">
+            <img class="grid-item-8" src="8.webp" alt="">
+            <p>"MONDO"</p>
+        </div>
+        <div class="grid-item">
+            <img class="grid-item-9" src="9.webp" alt="">
+            <p>"ELTUDTAM VOLNA ALLUDNI GKJDJK"</p>
+        </div>
+        <div class="grid-item">
+            <img class="grid-item-10" src="10.webp" alt="">
+            <p>"És sushi is volt már"</p>
+        </div>
+    </div>
+
+</body>
+</html>
